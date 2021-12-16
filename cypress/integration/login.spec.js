@@ -123,7 +123,7 @@ describe('login test', () => {
 
     it('loguot', () => {
         cy.wait(1000);
-        cy.get('.nav-link').eq(3).click();
+        cy.get('a[role="button "]').click();
     });
 
 });
