@@ -1,7 +1,6 @@
 {
   "name": "cypress1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "cypress": "^9.1.1",
@@ -9,8 +8,17 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "./node_modules/.bin/cypress open"
+    "test": "cypress open"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnastasijaMaksimovic/CypressLogin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnastasijaMaksimovic/CypressLogin/issues"
+  },
+  "homepage": "https://github.com/AnastasijaMaksimovic/CypressLogin#readme",
+  "description": ""
 }

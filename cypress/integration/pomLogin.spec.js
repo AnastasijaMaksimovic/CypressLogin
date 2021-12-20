@@ -17,9 +17,14 @@ let userData = {
         cy.url().should("contains", "gallery-app");
     });
 
-    it('login with invalid credentials', () => {
+    it.only('login with invalid credentials', () => {
         header.loginBtn.click();
         authLogin.login(userData.randomEmail, userData.randomPassword);
+
+        authLogin.errorMsg.should('be.visible');
+        authLogin.errorMsg.should('have.text', 'Bad Credentials');
+        authLogin.errorMsg.should('have.css', 'background-color', 'rgb(248, 215, 218)');
+        header.loginBtn.should('exist');
         cy.url().should("contains", "/login");
 
     });
@@ -29,7 +34,6 @@ let userData = {
         cy.url().should('contains', '/login');
 
         authLogin.login(validEmail, validPass);
-        cy.wait(20000);
         cy.url().should("not.contain", "/login");
 
     });
